@@ -10,6 +10,19 @@ app.get('/', (req, res) => {
     res.send('Hello I am Graphql')
 })
 
+class Friend{
+    constructor(id,{firstName,lastName,gender,language,email}){
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.language = language;
+        this.email = email;
+    }
+}
+
+const friendDatabase={};
+
 const root = {
     friend: () => {
         return {
@@ -18,13 +31,15 @@ const root = {
             lastName: "Doe",
             gender: "male",
             language: "English",
-            emails: [
-                { email: "me@me.com" },
-                { email: "another@email.com"}
-            ]
+            email: "me@me.com" 
         }
+    },
+    creteFriend: ({input}) => {
+        let id = require('crypto').randomBytes(10).toString('hex');
+        friendDatabase[id] = input;
+        return new Friend(id,input);
     }
-}
+};
 
 app.use('/graphql', graphqlHTTP({
     schema: schema,
