@@ -1,0 +1,22 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "test project to understand and learn graphql",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soumitracode/learning-graphql.git"
+  },
+  "keywords": [
+    "graphql"
+  ],
+  "author": "Soumitra Patra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soumitracode/learning-graphql/issues"
+  },
+  "homepage": "https://github.com/soumitracode/learning-graphql#readme"
+}
