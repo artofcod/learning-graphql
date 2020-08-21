@@ -1,10 +1,11 @@
 {
-  "name": "graphql",
+  "name": "essentialgraphql",
   "version": "1.0.0",
   "description": "test project to understand and learn graphql",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js "
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,19 @@
   "bugs": {
     "url": "https://github.com/soumitracode/learning-graphql/issues"
   },
-  "homepage": "https://github.com/soumitracode/learning-graphql#readme"
+  "homepage": "https://github.com/soumitracode/learning-graphql#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-stage-0": "^7.8.3"
+  }
 }
