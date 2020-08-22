@@ -11,7 +11,8 @@ const schema = buildSchema(`
     }
 
     type Query{
-        friend:Friend
+        friend:Friend,
+        getFraind(id:ID):Friend,
     }
 
     input FriendInput{
