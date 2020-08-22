@@ -1,11 +1,12 @@
 class Friend{
-    constructor(id,{firstName,lastName,gender,language,email}){
+    constructor(id,{firstName,lastName,gender,language,email,contacts}){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.language = language;
         this.email = email;
+        this.contacts = contacts
     }
 }
 
@@ -17,9 +18,13 @@ const resolvers = {
             id: 1545,
             firstName: "Jhon",
             lastName: "Doe",
-            gender: "male",
+            gender: "MALE",
             language: "English",
-            email: "me@me.com"
+            email: "me@me.com",
+            contacts:[
+                {firstName : "kuluy", lastName:"bhoo"},
+                {firstName : "bhomi", lastName:"yoma"}
+            ]
         }
     },
     getFraind:({ id })=>{
